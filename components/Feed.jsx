@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from "react";
 import PromptCard from "@components/PromptCard";
+import { data } from "autoprefixer";
 
 const PromptCardList = ({ data, handleTagClick }) => {
+ 
   return (
     <div className="mt-16 prompt_layout">
       {data.map((post) => {
@@ -34,6 +36,7 @@ const Feed = () => {
     };
     fetchPosts();
   }, []);
+  console.log(posts);
   return (
     <section className="feed">
       <form className="relative w-full flex-center">
